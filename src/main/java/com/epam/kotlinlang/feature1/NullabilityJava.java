@@ -6,10 +6,9 @@ import com.epam.kotlinlang.basics.feature1.NullabilityKt;
 public class NullabilityJava {
 
     public static void main(String[] args) {
-        Oak oak = NullabilityKt.getKosheysDeath();
-
         String isDead = null;
-        Chest chest = oak.getChest();
+
+        Chest chest = NullabilityKt.getKosheysDeath().getChest();
         if (chest != null) {
             Hare hare = chest.getHare();
             if (hare != null) {

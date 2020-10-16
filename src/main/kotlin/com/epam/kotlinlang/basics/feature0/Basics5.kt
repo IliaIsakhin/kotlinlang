@@ -8,9 +8,7 @@ fun main() {
 
     println(list.joinToString())
 
-    println(list.joinToString(", "))
+    println(list.joinToString("; ", "[", "]"))
 
-    println(list.joinToString(", ", "[", "]"))
-
-    println(list.joinToString(separator = ", ", prefix = "[", postfix = "]", transform = { it.dec().toString() }))
+    println(list.joinToString(separator = "; ", prefix = "[", postfix = "]", transform = { it.times(2).toString() }))
 }

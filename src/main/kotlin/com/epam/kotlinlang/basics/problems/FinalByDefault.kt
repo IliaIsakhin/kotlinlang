@@ -19,7 +19,7 @@ fun main() {
     mock.transaction("Вася", "Петя", 100)
 }
 
-open class LoggableService {
+class LoggableService {
 
-    open fun transaction(from: String, to: String, amount: Int) = println("$from перевел пользователю $to $amount рублей")
+    fun transaction(from: String, to: String, amount: Int) = println("$from перевел пользователю $to $amount рублей")
 }

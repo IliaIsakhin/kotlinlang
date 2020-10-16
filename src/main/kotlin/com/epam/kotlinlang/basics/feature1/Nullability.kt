@@ -3,13 +3,10 @@ package com.epam.kotlinlang.basics.feature1
 import com.epam.kotlinlang.basics.*
 
 fun main() {
-    val kosheysDeath = getKosheysDeath()
-
-    val isDead = if (kosheysDeath.chest?.hare?.duck?.egg?.spine?.isDead == true) "умер!" else "живой"
+    val dead = getKosheysDeath().chest?.hare?.duck?.egg?.spine?.isDead == true
+    val isDead = if (dead) "умер!" else "живой"
 
     println("Кощей $isDead")
-
-    val listOf1 = mutableListOf(1, 2, 3)
 }
 
-fun getKosheysDeath() = Oak(Chest(Hare(null)))
+fun getKosheysDeath() = Oak(Chest(Hare(Duck(Egg(Spine(true))))))

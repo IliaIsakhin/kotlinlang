@@ -7,7 +7,7 @@ fun main() {
     val maybeNumber = readNumber("123")
 
     if (maybeNumber is Int) {
-        println("Это число и я могу вызывать методы Int ${maybeNumber.toDouble()}")
+        println("Это число и я могу кастануть его к double ${maybeNumber.toDouble()}")
     } else {
         println("Я не смог распарсить, получилось $maybeNumber")
     }

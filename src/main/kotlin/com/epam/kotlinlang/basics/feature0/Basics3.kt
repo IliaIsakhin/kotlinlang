@@ -18,12 +18,11 @@ fun main() {
     Rectangle.PI
 }
 
-data class Rectangle(var a: Int, var b: Int) {
+class Rectangle(var a: Int, var b: Int) {
 
     constructor(a: Int) : this(a, a)
 
     fun isSquare() = a == b
-
 
     companion object {
         const val PI = Math.PI
