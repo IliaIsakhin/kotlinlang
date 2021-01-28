@@ -1,10 +1,7 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    java
-    kotlin("jvm") version "1.3.72"
-
-//    id("org.jetbrains.kotlin.plugin.allopen") version "1.3.72"
+    kotlin("jvm") version "1.4.10"
+    
+    id("me.champeau.gradle.jmh") version "0.5.2"
 }
 
 group = "com.epam"
@@ -15,19 +12,13 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7")
+    implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.4.1")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.1")
     implementation("org.mockito:mockito-all:1.10.19")
 
     compileOnly("org.projectlombok:lombok:1.18.12")
     annotationProcessor("org.projectlombok:lombok:1.18.12")
-}
-
-configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-}
-
-val compileKotlin: KotlinCompile by tasks
-compileKotlin.kotlinOptions {
-    jvmTarget = "1.8"
 }
