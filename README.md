@@ -35,5 +35,7 @@
     1. [Flows](src/main/kotlin/com/epam/kotlinlang/coroutines/feature4/Flows.kt)
     1. [Integrations: Future](src/main/kotlin/com/epam/kotlinlang/coroutines/feature5/CoroutineToCompletableFuture.kt)
     1. [Integrations: Reactor](src/main/kotlin/com/epam/kotlinlang/coroutines/feature5/FlowToFlux.kt)
-    1. [Blocking code in coroutine](src/main/kotlin/com/epam/kotlinlang/coroutines/problems/Blocking.kt)
+        1. [Blocking code in coroutine](src/main/kotlin/com/epam/kotlinlang/coroutines/problems/Blocking.kt)
+        1. [Shared number](src/main/kotlin/com/epam/kotlinlang/coroutines/problems/SharedNumber.kt)
+        1. [Shared state](src/main/kotlin/com/epam/kotlinlang/coroutines/problems/SharedState.kt)
     1. [Decompile example](src/main/kotlin/com/epam/kotlinlang/coroutines/util/DecompileExample.kt)
